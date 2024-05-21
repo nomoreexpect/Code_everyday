@@ -25,4 +25,9 @@ public class isPalindrome_125 {
 
         return true;
     }
+
+    public static void main(String[] args) {
+        isPalindrome_125 p = new isPalindrome_125();
+        System.out.println(p.isPalindrome("A man, a plan, a canal: Panama"));
+    }
 }
