@@ -3,7 +3,7 @@
  * @Date 2024/5/14-下午1:59
  * @Description:
  */
-public class Rotate {
+public class Rotate_189 {
     public void rotate1(int[] nums, int k) {
         // 确保k在数组长度范围内
         k %= nums.length;
@@ -31,14 +31,14 @@ public class Rotate {
         }
     }
     public static void main(String[] args) {
-        Rotate rotateInstance = new Rotate();
+        Rotate_189 rotate189Instance = new Rotate_189();
         int[] nums = {1, 2, 3, 4, 5, 6, 7};
         int k = 3;
 
         System.out.println("Original array: ");
         printArray(nums);
 
-        rotateInstance.rotate1(nums, k);
+        rotate189Instance.rotate1(nums, k);
 
         System.out.println("Rotated array: ");
         printArray(nums);
