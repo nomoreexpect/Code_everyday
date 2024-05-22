@@ -54,7 +54,10 @@ public class RandomizedSet_380 {
         System.out.println(set.getRandom()); // 可能返回 1、2 或 3
 
         System.out.println(set.remove(2)); // 可能返回 1、2 或 3
-        System.out.println(set.remove(2));
+        System.out.println(set.remove(2));//false
+
+        System.out.println(set.getRandom()); // 可能返回 1 或 3
+
     }
 }
 
