@@ -27,13 +27,16 @@ public class QuickSort {
     private static int partition(int[] arr, int start, int end) {
         int pivot = arr[start];
         int biggest_smallest = start;
-        for (int i = start+1; i < end; i++) {
+        for (int i = start+1; i <= end; i++) {
             if (arr[i] <= pivot) {
                 biggest_smallest++;
                 swap(arr, i, biggest_smallest);
             }
         }
-        swap(arr, start, biggest_smallest);
+//        swap(arr, start, biggest_smallest);
+        arr[start] = arr[biggest_smallest];
+        arr[biggest_smallest] = pivot;
+
         return biggest_smallest ;
     }
 
