@@ -15,25 +15,26 @@ public class QuickSort {
         arr[j] = temp;
     }
 
-    private static int partition(int[] arr) {
-        int pivot = arr[0];
-        int biggest_smallest = 0;
-        for (int i = 1; i < arr.length; i++) {
+    private static int partition(int[] arr, int start, int end) {
+        int pivot = arr[start];
+        int biggest_smallest = start;
+        for (int i = start+1; i < end; i++) {
             if (arr[i] <= pivot) {
                 biggest_smallest++;
                 swap(arr, i, biggest_smallest);
             }
         }
-        swap(arr, pivot, biggest_smallest);
+        swap(arr, start, biggest_smallest);
         return biggest_smallest ;
     }
 
-    private static void quickSort(int[] arr, int low, int high) {
-        if (low < high) {
-            int pivotIndex = partition(arr);
-            quickSort(arr, low, pivotIndex - 1);
-            quickSort(arr, pivotIndex + 1, high);
+    private static void quickSort(int[] arr, int start, int end) {
+        if (start >= end) {
+            return;
         }
+        int pivotIndex = partition(arr, start, end);
+        quickSort(arr, start, pivotIndex - 1);
+        quickSort(arr, pivotIndex + 1, end);
     }
 
     public static void main(int[] array) {
