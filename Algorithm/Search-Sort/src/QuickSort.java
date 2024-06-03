@@ -15,6 +15,15 @@ public class QuickSort {
         arr[j] = temp;
     }
 
+    private static void quickSort(int[] arr, int start, int end) {
+        if (start >= end) {
+            return;
+        }
+        int pivotIndex = partition(arr, start, end);
+        quickSort(arr, start, pivotIndex - 1);
+        quickSort(arr, pivotIndex + 1, end);
+    }
+
     private static int partition(int[] arr, int start, int end) {
         int pivot = arr[start];
         int biggest_smallest = start;
@@ -28,14 +37,7 @@ public class QuickSort {
         return biggest_smallest ;
     }
 
-    private static void quickSort(int[] arr, int start, int end) {
-        if (start >= end) {
-            return;
-        }
-        int pivotIndex = partition(arr, start, end);
-        quickSort(arr, start, pivotIndex - 1);
-        quickSort(arr, pivotIndex + 1, end);
-    }
+
 
     public static void main(int[] array) {
         for (int i = 0; i < array.length; i++) {
