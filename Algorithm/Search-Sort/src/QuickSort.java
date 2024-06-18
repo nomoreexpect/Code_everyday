@@ -42,10 +42,10 @@ public class QuickSort {
 
 
 
-    public static void main(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]+ " ");
-        }
-        System.out.println();
-    }
+//    public static void main(int[] array) {
+//        for (int i = 0; i < array.length; i++) {
+//            System.out.println(array[i]+ " ");
+//        }
+//        System.out.println();
+//    }
 }

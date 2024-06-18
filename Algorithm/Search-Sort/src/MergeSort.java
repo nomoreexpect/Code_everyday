@@ -26,19 +26,21 @@ public class MergeSort {
         int p1 = 0;
         int p2 = mid;
         for (int i = start; i <= end; i++) {
-        if (arr1[p1] < arr[p2]) {
-            arr[i] = arr1[p2];
-            p1++;
-            if (p1 == len1) {break;}
-        }else {
-            arr[i] = arr1[p2];
-            p2++;
-            if (p2 > end) {while (p1 < len1) {i++;
-            arr[i] = arr1[p1];
-            p1++;}}
-        }
+            if (arr1[p1] < arr[p2]) {
+                arr[i] = arr1[p2];
+                p1++;
+                if (p1 == len1) {break;}
+            }else {
+                arr[i] = arr1[p2];
+                p2++;
+                if (p2 > end) {
+                    while (p1 < len1) {
+                        i++;
+                        arr[i] = arr1[p1];
+                        p1++;
+                    }
+                }
+            }
         }
     }
-
-
 }
