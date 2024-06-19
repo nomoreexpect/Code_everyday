@@ -10,7 +10,7 @@ public class MergeSort {
     }
 
     public static void sortSection(int[] arr, int start, int end) {
-        if (start < end) {
+        if (start == end) {
             return;
         }
         int mid = (start + end) / 2;
