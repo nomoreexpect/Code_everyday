@@ -3,7 +3,7 @@ package org.example;
 import java.util.*;
 
 
-class Solution {
+class groupAnagrams_ {
     public List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> map = new HashMap<String, List<String>>();
         for (String str : strs) {
@@ -15,6 +15,10 @@ class Solution {
             map.put(key, list);
         }
         return new ArrayList<List<String>>(map.values());
+    }
+
+    public static void main(String[] args) {
+        
     }
 }
 

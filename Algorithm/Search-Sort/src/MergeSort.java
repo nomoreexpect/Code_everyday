@@ -16,15 +16,15 @@ public class MergeSort {
         int mid = (start + end) / 2;
         sortSection(arr, start, mid);
         sortSection(arr, mid + 1, end);
-        merge(arr, start, mid, end);
+        merge(arr, start, mid + 1, end);
     }
 
-    public static void merge(int[] arr, int start, int mid, int end) {
-        int len1 = mid - start;
+    public static void merge(int[] arr, int start, int strat2, int end) {
+        int len1 = strat2 - start;
         int[] arr1 = new int[len1];
-        System.arraycopy(arr, start, arr1, 0, len1);
+        System.arraycopy(arr, start, arr1, 0, len1) ;
         int p1 = 0;
-        int p2 = mid;
+        int p2 = strat2;
         for (int i = start; i <= end; i++) {
             if (arr1[p1] < arr[p2]) {
                 arr[i] = arr1[p2];
